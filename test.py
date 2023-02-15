@@ -30,10 +30,14 @@ class Mainwindow(QtWidgets.QMainWindow, win.Ui_mainWindow):
         self.progressBar = self.progressBar
         self.ProgressLength = 1000  # max length of progress bar
         self.count = 0
-    def updateLength(self):
-        percent = int(self.count / self.cap.get(cv2.CAP_PROP_FRAME_COUNT) * self.ProgressLength)
-        return percent
+        self.total_frame = 0
 
+    def updateLength(self):
+        if(self.total_Frame != -1): # if not camera
+            percent = int((self.count / self.total_Frame) * self.ProgressLength)
+            return percent
+        else:
+            return 0
     def dealFrame(self, frame):  # display video on Qlabel via opencv
         frame_height, frame_width, _ = frame.shape
         label_height = self.raw_video.height()
@@ -64,6 +68,7 @@ class Mainwindow(QtWidgets.QMainWindow, win.Ui_mainWindow):
         self.cap.release()
         cv2.destroyAllWindows()
 
+
     def get_cap(self, file_path):
         self.cap = cv2.VideoCapture(file_path)
 
@@ -80,20 +85,27 @@ class Mainwindow(QtWidgets.QMainWindow, win.Ui_mainWindow):
         if (initFunc):
 
             if (self.cap):
+                self.count = 0
                 self.closeVedio()
+
             if (not initFunc()):
                 return
             self.play = True
 
         while True:
+            self.total_Frame = self.cap.get(cv2.CAP_PROP_FRAME_COUNT)
+
+
             if not self.play:
                 return
 
             if (not func()):
                 return
+            self.count = self.count + 1
             cv2.waitKey(self.get_delay())
-            self.count = self.count+1
+
             self.progressBar.setValue(self.updateLength())
+
     def ShowFrame(self):
         ret, frame = self.cap.read()
         if (ret):
@@ -126,7 +138,7 @@ class Mainwindow(QtWidgets.QMainWindow, win.Ui_mainWindow):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    #app.setWindowIcon(QIcon('yolo.png'))
+    app.setWindowIcon(QIcon('yolo.png'))
     player = Mainwindow()
     player.show()
 

@@ -17,7 +17,7 @@ class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         if not mainWindow.objectName():
             mainWindow.setObjectName(u"mainWindow")
-        mainWindow.resize(1200, 700)
+        mainWindow.resize(1203, 700)
         mainWindow.setMouseTracking(True)
         icon = QIcon()
         icon.addFile(u":/img/icon/\u56fe\u72471.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -122,6 +122,7 @@ class Ui_mainWindow(object):
 "background-color: rgba(223, 223, 223, 150);}")
         icon2 = QIcon()
         icon2.addFile(u"F:/desktop/PyQt5-YOLOv5-yolov5_v6.1/PyQt5-YOLOv5-yolov5_v6.1/icon/\u6b63\u65b9\u5f62.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u"F:/desktop/PyQt5-YOLOv5-yolov5_v6.1/PyQt5-YOLOv5-yolov5_v6.1/icon/\u8fd8\u539f.png", QSize(), QIcon.Normal, QIcon.On)
         self.maxButton.setIcon(icon2)
         self.maxButton.setCheckable(True)
 

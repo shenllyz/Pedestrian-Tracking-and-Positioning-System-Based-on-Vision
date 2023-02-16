@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
+    <width>1203</width>
     <height>700</height>
    </rect>
   </property>
@@ -230,7 +230,8 @@ background-color: rgba(223, 223, 223, 150);}</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>F:/desktop/PyQt5-YOLOv5-yolov5_v6.1/PyQt5-YOLOv5-yolov5_v6.1/icon/正方形.png</normaloff>F:/desktop/PyQt5-YOLOv5-yolov5_v6.1/PyQt5-YOLOv5-yolov5_v6.1/icon/正方形.png</iconset>
+                <normaloff>F:/desktop/PyQt5-YOLOv5-yolov5_v6.1/PyQt5-YOLOv5-yolov5_v6.1/icon/正方形.png</normaloff>
+                <normalon>F:/desktop/PyQt5-YOLOv5-yolov5_v6.1/PyQt5-YOLOv5-yolov5_v6.1/icon/还原.png</normalon>F:/desktop/PyQt5-YOLOv5-yolov5_v6.1/PyQt5-YOLOv5-yolov5_v6.1/icon/正方形.png</iconset>
               </property>
               <property name="checkable">
                <bool>true</bool>

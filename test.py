@@ -11,6 +11,8 @@ import cv2
 import numpy as np
 from PySide2.QtGui import QIcon
 from PySide2.QtGui import QImage, QPixmap
+from PySide2.QtGui import QCloseEvent
+from PySide2.QtCore import QCoreApplication, Qt
 import time
 
 
@@ -18,6 +20,8 @@ class Mainwindow(QtWidgets.QMainWindow, win.Ui_mainWindow):
     def __init__(self):
         super(Mainwindow, self).__init__()
         self.setupUi(self)
+
+
         self.play = True
         self.button1 = self.fileButton
         self.button2 = self.cameraButton
@@ -26,11 +30,18 @@ class Mainwindow(QtWidgets.QMainWindow, win.Ui_mainWindow):
         self.button2.clicked.connect(lambda: self.loop(self.ShowFrame, self.cameraInit))
         self.stopButton.clicked.connect(self.stop)  # stopCamera
         self.runButton.clicked.connect(self.pause)
+
         self.cap = None
         self.progressBar = self.progressBar
         self.ProgressLength = 1000  # max length of progress bar
         self.count = 0
         self.total_frame = 0
+
+    def closeEvent(self, event: QCloseEvent):
+        # 在这里执行停止摄像头调用的操作
+        self.closeVedio()
+        # 最后要调用父类的closeEvent方法，否则窗口无法正常关闭
+        super().closeEvent(event)
 
     def updateLength(self):
         if(self.total_Frame != -1): # if not camera
@@ -38,6 +49,7 @@ class Mainwindow(QtWidgets.QMainWindow, win.Ui_mainWindow):
             return percent
         else:
             return 0
+
     def dealFrame(self, frame):  # display video on Qlabel via opencv
         frame_height, frame_width, _ = frame.shape
         label_height = self.raw_video.height()
@@ -140,6 +152,7 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     app.setWindowIcon(QIcon('yolo.png'))
     player = Mainwindow()
+
     player.show()
 
     app.exec_()

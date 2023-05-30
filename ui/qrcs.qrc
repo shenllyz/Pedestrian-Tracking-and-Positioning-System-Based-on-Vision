@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="img">
+    <file>icon/箭头_列表收起.png</file>
+    <file>icon/箭头_列表展开.png</file>
+    <file>icon/yolo.png</file>
+  </qresource>
+</RCC>

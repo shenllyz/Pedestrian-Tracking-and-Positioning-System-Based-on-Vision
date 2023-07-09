@@ -26,9 +26,6 @@ python get_query.py
 
 ps:也可以直接将图像放在query文件中，但名字也需要按mark1501命名。
 
-<p align="center">
-  <img src="get_query_images.png" width="300" height="300"/>
-</p>
 
 # 人员查找
 

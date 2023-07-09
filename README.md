@@ -43,6 +43,6 @@ The workflow of this system is as follows:
 |Project|Author|LICENSE|
 |:-|:-:|-:|
 |[PyQt5-YOLOv5](https://github.com/Javacr/PyQt5-YOLOv5)|[Javacr ](https://github.com/Javacr)|[LICENSE](https://github.com/Javacr/PyQt5-YOLOv5/blob/yolov5_v6.1/LICENSE)|
-|[VTuber_Unity](https://github.com/kwea123/VTuber_Unity)|[AI葵](https://github.com/kwea123)|[LICENSE](https://github.com/kwea123/VTuber_Unity/blob/master/LICENSE)|
+|[yolov5_reid ](https://github.com/YINYIPENG-EN/yolov5_reid/tree/master/person_search)|[YINYIPENG](https://github.com/YINYIPENG-EN)|[LICENSE](https://github.com/YINYIPENG-EN/yolov5_reid/LICENSE)|
 |[Facial-emotion-recognition-using-mediapipe](https://github.com/REWTAO/Facial-emotion-recognition-using-mediapipe)|[ REWTAO ](https://github.com/REWTAO)|[LICENSE](https://github.com/REWTAO/Facial-emotion-recognition-using-mediapipe/blob/main/LICENSE)|
  

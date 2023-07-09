@@ -44,5 +44,5 @@ The workflow of this system is as follows:
 |:-|:-:|-:|
 |[PyQt5-YOLOv5](https://github.com/Javacr/PyQt5-YOLOv5)|[Javacr ](https://github.com/Javacr)|[LICENSE](https://github.com/Javacr/PyQt5-YOLOv5/blob/yolov5_v6.1/LICENSE)|
 |[yolov5_reid ](https://github.com/YINYIPENG-EN/yolov5_reid/tree/master/person_search)|[YINYIPENG](https://github.com/YINYIPENG-EN)|[LICENSE](https://github.com/YINYIPENG-EN/yolov5_reid)|
-|[Facial-emotion-recognition-using-mediapipe](https://github.com/REWTAO/Facial-emotion-recognition-using-mediapipe)|[ REWTAO ](https://github.com/REWTAO)|[LICENSE](https://github.com/REWTAO/Facial-emotion-recognition-using-mediapipe/blob/main/LICENSE)|
+|[DeepSORT_YOLOv5_Pytorch ](https://github.com/HowieMa/DeepSORT_YOLOv5_Pytorch)|[HowieMa  ](https://github.com/HowieMa)|[LICENSE](https://github.com/ultralytics/yolov5/blob/master/LICENSE)|
  

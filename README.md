@@ -1,4 +1,4 @@
-# Object-Tracking-and-Positioning-System-Based-on-Vision
+#Pedestrian-Tracking-and-Positioning-System-Based-on-Vision
 ## System Main Functions
 1. **Pedestrian Detection**: The system should accurately detect all pedestrian targets in the input video.
 2. **Multi-Target Pedestrian Tracking**: The system should perform multi-target pedestrian tracking in consecutive video frames based on pedestrian detection results.
